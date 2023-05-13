@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Flutter Demo ',
       theme: ThemeData.dark().copyWith(scaffoldBackgroundColor: darkBlue),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -48,7 +48,17 @@ class _MyHomePageState extends State<MyHomePage> {
 class FaceOutlinePainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
-    // TODO: implement paint
+    // Define a paint object
+    final paint = Paint()
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 4.0
+      ..color = Colors.indigo;
+
+    //left eye
+    canvas.drawRRect(
+        RRect.fromRectAndRadius(
+            Rect.fromLTWH(20, 40, 100, 100), Radius.circular(20)),
+        paint);
   }
 
   @override
