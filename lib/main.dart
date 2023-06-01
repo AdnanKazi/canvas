@@ -35,8 +35,8 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       body: Center(
         child: Container(
-          width: double.infinity,
-          height: double.infinity,
+          width: double.maxFinite,
+          height: double.maxFinite,
           color: Colors.yellow,
           child: CustomPaint(painter: FaceOutlinePainter()),
         ),
